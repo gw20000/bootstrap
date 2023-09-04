@@ -1,0 +1,774 @@
+<!DOCTYPE html >
+<html lang="zh-CN">
+<head>
+	<title>
+	  Bootstrap reponsive首页
+	</title>
+	<meta charset="utf-8">
+	<meta name='viewport' content="width=device-width, initial-scale=1.0 user-scalable=no">
+
+	<style type="text/css">
+
+
+		/*⚠️样式重置
+*/  
+		html{
+			width:100%;
+			 font-size: 14px;
+		}
+		html,body,p,h1,a {
+           padding: 0px;
+           margin: 0px;
+          
+           overflow-x: hidden;
+		}
+		
+    a{
+    	text-decoration: none;
+    	 color: rgb(119, 119, 119);
+    }
+
+
+
+
+
+
+/*⚠️菜单栏
+*/  
+     .menu{
+
+     	/*overflow-x:hidden;*/
+        width:100vw;
+        min-height: 50px;
+        height: 51px;
+        border:1px solid #000;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 20px;
+        background-color: rgb(34,34,34);
+        /*color: rgb(51,51,51);*/
+
+        position: fixed;
+        top: 0px;
+        left: 0px;
+      
+        z-index: 1030;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        box-sizing: border-box;
+
+
+     }
+
+     .menu div{
+     
+      white-space: nowrap;
+      font-size: 14px;
+       margin: 0px 14px 0px;
+     }
+
+.menu div a:hover{
+       color: #fff;
+}
+     .menu div:nth-of-type(1){
+     	font-size: 20px;
+
+     }
+     .menu div:nth-of-type(1),.menu div:nth-of-type(2),.menu div:nth-of-type(3){
+     	/*width:150px;*/
+     	
+     }
+
+     .menu .about{
+     	margin-left:210px;
+     	margin-right: -40px;
+     }
+
+.menu div:nth-of-type(2),.menu div:nth-of-type(3),.menu div:nth-of-type(4),.menu div:nth-of-type(5),.menu div:nth-of-type(6),.menu div:nth-of-type(7),.menu div:nth-of-type(8){
+	display: none;
+}
+
+     .menu .menu-btn{
+     	position: absolute;
+     	right: 0px;
+     	width:45px;
+     	height: 35px;
+     	padding:8px;
+     	border-radius: 5px;
+     	box-sizing: border-box;
+     	border: 1px solid #333;
+     	/*background-color:#f;*/
+     	display: flex;
+     	flex-direction: column;
+     	justify-content: space-around;
+     	align-items: center;
+     	
+     }
+
+     .menu .menu-btn:hover{
+     	background-color: #333;
+     }
+   .menu .menu-btn span{
+   	  width:65%;
+   	  border:1px solid white;
+   }
+
+
+
+/*⚠️塌陷菜单栏
+*/   
+  .callapse{
+  	      
+     	 width:100vw;
+     	 background-color:#222;
+     	 border-top: 1px solid #333;
+     	  border-bottom: 1px solid #000;
+     	  box-sizing: border-box;
+         /*text-align: center;*/
+
+         position: fixed;
+         top: 51px;
+         /*z-index: 103;*/
+       padding: 15px;
+
+
+     }
+     .callapse .callapse-items{
+     	box-sizing: border-box;
+     	margin: 0px;
+     	padding: 0px;
+     	height: 40px;
+     	line-height: 40px;
+     }
+.callapse .callapse-items a:hover {
+        color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*⚠️头部
+*/  
+
+     .head{
+     	/*overflow-x:hidden;*/
+     	width: 100vw;
+     	height: 515px;
+      background-image: linear-gradient(45deg, rgb(2, 0, 49), rgb(109, 51, 83));
+      box-shadow: inset 0px 3px 7px 0px rgba(0, 0, 0, 0.2) , inset 0px -3px 7px 0px  rgba(0, 0, 0, 0.2) ;
+      /*height: 384px;*/
+      padding-top: 50px;
+      padding-bottom: 30px;
+      box-sizing: border-box;
+     }
+     .head .container{
+     	height: 482px;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+     	align-items:center;
+     	flex-direction: column;
+     	text-align: center;
+     }
+
+
+
+      
+     .head .container h1{
+     	overflow: hidden;
+         font-size: 60px;
+       	line-height: 60px;
+       
+     }
+
+     .head .container h2 {
+       
+       	 font-size: 18px;
+       	line-height: 22px;
+     }
+        .head .container .p2{
+      	width:300px;
+      	height: 50px;
+      	margin-top:10px;
+      }
+      .head .container .p1{
+      		/*background-color: rgba(0,100,255,0);*/
+      		border-radius: 10px;
+      	 height: 60px;
+      }
+    .head .container .p1 a {
+    	background-color: rgba(0,100,255,1);
+    	border-radius: 10px;
+    	    display: block;
+    		 font-size: 18px;
+        	line-height: 50px;
+        	
+        	   color: #fff;
+        		width:300px;
+            	height: 50px;
+            	overflow: hidden;
+            	box-shadow:0px 4px 0px 1px rgba(32,75,127,.6);
+            	transition: all .9s;
+            	
+
+}
+.head .container .p1 a:hover{
+	background-color: rgba(32,75,127,1)
+}
+
+    }
+    .head .container .p2 a{
+    		 font-size: 14px;
+        	line-height: 20px;
+
+    }
+     .head .container .p2 a:hover{
+     	text-decoration: underline;
+     	color: #fff;
+     }
+
+
+
+/*⚠️主要区域
+*/  
+     .main{
+     	width:100vw;
+     	overflow-x:hidden;
+     	/*width:100vh;*/
+       
+     }
+     .main .main-tittle{
+     	width:70vw;
+     	margin: 0 auto;
+     	font-weight: 500px;
+     	box-sizing: border-box;
+     	border-bottom: 3px solid #eee;
+     	padding-bottom: 20px;
+     	/*background-color: #fac;*/
+     	display: flex;
+     	justify-content: center;
+     	align-items:center;
+     	flex-direction: column;
+     	margin-bottom: 40px;
+      color: #333;
+
+
+ 
+
+
+     }
+     .main .main-tittle h2{
+     	
+      font-size: 30px;
+      letter-spacing: -1px;
+
+
+     }
+
+
+     .main .main-content{
+     	width: 85vw;
+     	margin: 0 auto;
+     	/*padding: 0px  30px;*/
+     	/*background-color: #fac;*/
+     	display: flex;
+     	justify-content: space-around;
+     	align-items:center;
+     	flex-wrap: wrap;
+
+     }
+
+    .main .main-content .items{
+        width: 60vw;
+        height: 350px;
+        border: 1px solid #ccc;
+        /*background-color: #ddd;*/
+        text-align: center;
+        margin-bottom: 30px;
+        box-sizing: border-box;
+       overflow: hidden;
+       padding: 5px 5px 0px;
+      
+    }
+
+   
+
+    .item-sub-wrapper{
+     padding:5px;
+     
+     overflow:hidden;
+
+    }
+    .main .items img{
+
+    	width:100%;
+    }
+
+    .main .items h2{
+    	color:  rgb(35, 82, 124);
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    .main .items h2:hover{
+         color: #006;
+    }
+     .main .items p{
+
+     	color: rgb(119, 119, 119);
+     }
+
+    
+    .main .items p:nth-of-type(1){
+                font-size: 16px;
+                /*line-height: 16px;*/
+                margin-bottom: 14px;
+    }
+     .main .items p:nth-of-type(2),.main .items p:nth-of-type(3){
+    	
+      font-size: 14px;
+      /*line-height: 14px;*/
+    }
+  
+
+
+/*⚠️尾部区域
+*/  
+     .footer{
+     	/*overflow-x:hidden;*/
+     	width:100vw;
+     	/*background-color:;*/
+     	border-top: 3px solid #eee;
+     	margin-top: 60px;
+     	padding: 20px 0px 10px;
+      
+       
+        right: 0px;
+        left: 0px;
+
+
+
+        display: flex;
+        justify-content: center;
+       
+        flex-wrap: wrap;
+        
+
+
+
+     }
+     .footer-items{
+         width: 150px;
+         margin-top: 20px;
+        
+     }
+
+.footer-items:nth-of-type(1){
+	width:600px;
+	display: flex;
+	flex-direction: column;
+	align-items:flex-start;
+}
+.footer-items:nth-of-type(1) img {
+   margin-bottom:14px;
+
+}
+
+.footer-items p {
+	 font-size: 14px;
+    color: rgb(119, 119, 119);
+    overflow: hidden;
+
+}
+.footer-items p a:hover{
+   text-decoration: underline;
+}
+
+
+.footer-items p:nth-of-type(1) a {
+	color: rgb(86, 61, 124);
+	
+}
+
+.footer-items p:nth-of-type(1) a:hover{
+	text-decoration: none;
+}
+.footer-items p:nth-of-type(1){
+	font-size: 16px;
+	line-height: 17px;
+	margin-bottom: 15px;
+}
+
+
+.bottom{
+	width:85vw;
+	overflow-x:hidden;
+	height: 80px;
+	text-align: center;
+	color: rgb(119, 119, 119);
+	padding-top: 20px;
+	margin: 0 auto;
+	border-top: 3px solid #eee;
+    
+}
+      
+
+
+
+
+/*⚠️媒体查询（最好放到style标签最后）
+*/  
+       @media screen and (min-width: 768px){
+      /*  .menu{
+        	min-height: 40px;
+        	height: 43px;
+        } 
+        .head{
+        	
+        	 height: 384px;
+        }
+        .head .container{
+        	height: 282px;
+        	height: 244px;
+
+        }
+
+       .head .container h1{
+       	font-size: 90px;
+       	line-height: 90px;
+
+       	 font-size: 60px;
+       	line-height: 60px;
+       }
+      .head .container h2{
+       	
+         font-size: 24px;
+       	line-height: 30px;
+
+       	font-size: 18px;
+       	line-height: 22px;
+       }
+
+
+*/  
+.menu div:nth-of-type(2),.menu div:nth-of-type(3),.menu div:nth-of-type(4),.menu div:nth-of-type(5),.menu div:nth-of-type(6),.menu div:nth-of-type(7),.menu div:nth-of-type(8){
+	display: block;
+}
+
+
+/*.wrapper .appBootstrap .menu{
+	background-color: yellow;
+}
+*/
+ /*.wrapper .appBootstrap.menu div.hiden{
+	   display: block; //⚠️权重不够 ， 解决技巧： 直接把选择器复制过来 ，媒体查询放在style标签最后
+*/
+
+/*} */
+    .wrapper .menu .menu-btn{
+     display: none;
+}
+     .wrapper .callapse{
+     	display: none; 
+
+     }
+
+ /*⚠️大于768px后 ，menu 居中展示*/
+ .menu{
+
+     	overflow-x:hidden;
+        width:100%;
+        min-height: 50px;
+        height: 51px;
+        border:1px solid #000;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 20px;
+        background-color: rgb(34,34,34);
+        /*color: rgb(51,51,51);*/
+
+        position: fixed;
+        top: 0px;
+        left: 0px;
+      
+        z-index: 1030;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        box-sizing: border-box;
+
+
+          }
+.main .main-tittle{
+     	width:50vw;
+     	margin: 0 auto;
+     	font-weight: 500px;
+     	box-sizing: border-box;
+     	border-bottom: 3px solid #eee;
+     	padding-bottom: 20px;
+     	/*background-color: #fac;*/
+     	display: flex;
+     	justify-content: center;
+     	align-items:center;
+     	flex-direction: column;
+     	margin-bottom: 40px;
+        }
+
+
+
+ .main .main-tittle h2{
+      
+      font-size: 3rem;
+      letter-spacing: -1px;
+
+
+     }
+
+
+
+
+
+
+
+     }
+
+
+
+
+
+@media screen and (min-Width:635px){
+       
+  .main .main-content .items{
+        width: 270px;
+        height: 350px;
+        /*background-color: #ddd;*/
+        text-align: center;
+        margin-bottom: 30px;
+
+    }
+
+
+     .head .container h1{
+     	overflow: hidden;
+         font-size: 90px;
+       	line-height: 100px;
+       
+     }
+
+     .head .container h2 {
+       
+       	 font-size: 24px;
+       	line-height: 30px;
+     }
+
+}
+
+	</style>
+</head>
+<body>
+<div class='wrapper'>
+	<div class="appBootstrap">
+
+
+
+		<div class="total-menu">
+		<div class="menu">
+			
+
+       <div><a href="">Bootstrap中文网</a></div>
+       <div class="hiden"><a href="">Bootstrap3中文文档</a></div>
+       <div class="hiden"><a href="">Bootstrap4中文文档</a></div>
+       <div class="hiden"><a href="">Sass 教程</a></div>
+       <div class="hiden"><a href="">Less 教程</a></div>
+       <div class="hiden"><a href="">jQuery API</a></div>
+       <div class=" hiden active"><a href="">网站实例</a></div>
+       <div class=" hiden about"><a href="">关于</a></div>
+       <div class="menu-btn">
+       	<span></span>
+       	<span></span>
+       	<span></span>
+       </div>
+
+
+
+		</div>
+
+    <!--  <div class="callapse">
+       <div class='callapse-items'><a href="">Bootstrap3中文文档</a></div>
+       <div class='callapse-items'><a href="">Bootstrap4中文文档</a></div>
+       <div class='callapse-items'><a href="">Sass 教程</a></div>
+       <div class='callapse-items'><a href="">Less 教程</a></div>
+       <div class='callapse-items'><a href="">jQuery API</a></div>
+       <div class=" callapse-items active"><a href="">网站实例</a></div>
+       <div class=" callapse-items about"><a href="">关于</a></div>
+     </div> -->
+
+
+
+</div>
+
+
+
+
+
+		<div class="head">
+			<div class='container'>
+
+            <h1>Bootstrap</h1>
+            <h2>简洁、直观、强悍的前端开发框架，让web开发更迅速、简单。</h2>
+            <p class='p1'><a href="">Bootstrap3中文文档v3.3.7</a></p>
+            <p class='p2'><a href="">Bootstrap2中文文档v2.3.2</a></p>
+
+
+			</div>
+		</div>
+
+		<div class="main">
+			<div class='main-tittle'>
+			<h2 >Bootstrap相关优质项目推荐</h2>
+			<p>这些项目或者是对Bootstrap进行了有益的补充，或者是基于Bootstrap开发的</p>
+			</div>
+
+			<div class="main-content">
+
+			     <div class="items">
+			     	 <a href="">
+			     	 	<img src="image/boostrap.png" alt='Bootstrap'>
+			     	 </a>
+           <div class="item-sub-wrapper">
+                   <h2>优站精选</h2>
+                   <p>Bootstrap 网站实例</p>
+                   <p>Bootstrap 优站精选频道收集了众多基于 Bootstrap 构建、设计精美的、有创意的网站。</p>
+
+
+              </div>
+
+			     </div>
+			     <div class="items">2</div>
+			     <div class="items">3</div>
+			     <div class="items">4</div>
+			     <div class="items">5</div>
+			     <div class="items">6</div>
+			     <div class="items">7</div>
+			     <div class="items">8</div>
+			     <div class="items">9</div>
+			     <div class="items">10</div>
+			     <div class="items">11</div>
+			     <div class="items">12</div>
+			     <div class="items">1</div>
+			     <div class="items">2</div>
+			     <div class="items">3</div>
+			     <div class="items">4</div>
+			     <div class="items">5</div>
+			     <div class="items">6</div>
+			     <div class="items">7</div>
+			     <div class="items">8</div>
+			     <div class="items">9</div>
+			     <div class="items">10</div>
+			     <div class="items">11</div>
+			     <div class="items">12</div>
+			     
+			     
+			</div>
+		
+		</div>
+
+
+		<div class="footer">
+			<div class='footer-items'>
+				<img src="image/logo.png" alt=" Bootstrap logo">
+				<p>我们一直致力于为广大开发者提供更多的优质技术文档和辅助开发工具！</p>
+			</div>
+			<div class="footer-items">
+				<p><a href="">关于</a></p>
+				<p><a href="">关于我们</a></p>
+				<p><a href="">广告合作</a></p>
+				<p><a href="">友情链接</a></p>
+				<p><a href="">招聘</a></p>
+			</div>
+			<div class="footer-items">
+				<p><a href="">联系方式</a></p>
+				<p><a href="">新浪微博</a></p>
+				<p><a href="">电子邮件</a></p>
+			</div>
+			<div class="footer-items">
+				<p><a href="">旗下网站</a></p>
+				<p><a href="">BootCDN</a></p>
+				<p><a href="">Packagist中国镜像</a></p>
+			</div>
+			<div class="footer-items">
+				<p><a href="">特别致谢</a></p>
+				<p><a href="">猫云</a></p>
+			</div>
+		</div>
+		<div class='bottom'>京ICP备11008151号-6京公网安备11010802014853</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	
+
+
+var totalMenu = document.getElementsByClassName('total-menu')[0];
+var menuBtn = document.getElementsByClassName('menu-btn')[0];
+var toggle = 1;
+var div = document.createElement('div');
+ div.className = "callapse";
+
+menuBtn.addEventListener('click', renderHidenMenu);
+
+
+function renderHidenMenu(e){
+	        // console.log(e.target);
+	        
+	        e.preventDefault();
+	        e.stopPropagation();
+            if (toggle%2){
+       var str =`<div class='callapse-items'><a href="">Bootstrap3中文文档</a></div>
+       <div class='callapse-items'><a href="">Bootstrap4中文文档</a></div>
+       <div class='callapse-items'><a href="">Sass 教程</a></div>
+       <div class='callapse-items'><a href="">Less 教程</a></div>
+       <div class='callapse-items'><a href="">jQuery API</a></div>
+       <div class=" callapse-items active"><a href="">网站实例</a></div>
+       <div class=" callapse-items about"><a href="">关于</a></div>
+     `;
+
+div.innerHTML = str;
+
+totalMenu.appendChild(div);
+  }else{
+  	totalMenu.removeChild(div);
+  }
+
+
+toggle++;
+toggle===2 ? 0 : 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
